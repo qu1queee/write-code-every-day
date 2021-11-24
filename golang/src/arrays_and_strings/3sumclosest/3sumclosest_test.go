@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestPreorderTraversal(t *testing.T) {
+func TestThreeSumClosest(t *testing.T) {
 	testCases := [][]int{
 		{-1, 2, 1, -4},
 		{0, 0, 0},
