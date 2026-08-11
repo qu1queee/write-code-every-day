@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestPreorderTraversal(t *testing.T) {
+func TestTwoSum(t *testing.T) {
 	testCases := [][]int{
 		{3, 2, 4},
 		{2, 7, 11, 15},

@@ -1,5 +1,6 @@
 # Go Data Structures & Algorithms — Mastery Plan
 
+> Track progress in [progress.md](progress.md).
 > Duration: ~10–11 weeks at 3 new problems/week. Weekend katacoding review.
 > Self-paced — phases are the fixed sequence, weeks are elastic. No deadline.
 > 32 new problems total
