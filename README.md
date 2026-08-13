@@ -22,7 +22,32 @@ make test
 
 **Start here:** Phase 0 at `go/problems/phase0/lc0225_stack_using_queues/`.
 
-### 2. Solve a problem (daily workflow)
+### 2. Interactive practice guide (Cursor skill)
+
+This repo ships a Cursor Agent skill at [`.cursor/skills/leetcode-practice/SKILL.md`](.cursor/skills/leetcode-practice/SKILL.md). It walks one curriculum problem at a time without spoiling tests or solutions early.
+
+**Start a session** in Cursor Agent chat with a phrase like:
+
+- `practice phase 0`
+- `start practice guide`
+- `leetcode guide for LC 225`
+
+Pick a problem from the phase list. The guide then steps through: Restate → Approach → Scaffold → Implement → Tests → Verify.
+
+**Controls** (after each step):
+
+| Command | Meaning |
+|---|---|
+| `next` | Advance to the next step |
+| `back` | Return to the previous step |
+| `run` | Execute only the current step's action |
+| `drop` | End the guide |
+
+When Cursor’s Ask questions UI is available, choose these from a clickable picker; otherwise type the command (or `n` / `b` / `r` / `d`).
+
+You can still solve problems manually with the workflow below — the skill is optional coaching on top of the same folders and `progress.md` tracker.
+
+### 3. Solve a problem (daily workflow)
 
 Each problem lives in its own folder:
 
@@ -54,7 +79,7 @@ Example: `go/problems/phase1/lc0206_reverse_linked_list/`
 
 Add `solution.go`, `solution_test.go`, and optionally `notes.md` for pattern notes or complexity analysis.
 
-### 3. Run tests
+### 4. Run tests
 
 From the repository root:
 
@@ -74,7 +99,7 @@ go test ./problems/phase0/...
 go test ./problems/archive/...
 ```
 
-### 4. Katacoding (weekend re-solve from memory)
+### 5. Katacoding (weekend re-solve from memory)
 
 Katacoding means backing up your solution and re-implementing it from scratch on a later day, without notes, until the pattern feels automatic.
 
@@ -89,7 +114,7 @@ This will:
 
 After re-solving, run the problem's tests again and update [plans/progress.md](plans/progress.md) (`solved` → `kata-1` → `kata-2` → `automatic`).
 
-### 5. Use shared types (tree / linked-list problems)
+### 6. Use shared types (tree / linked-list problems)
 
 For new problems that need `TreeNode` or `ListNode`, import the shared package instead of redefining types:
 
@@ -102,6 +127,8 @@ Archived solutions under `go/problems/archive/` keep their original local type d
 ## Repository layout
 
 ```
+.cursor/skills/
+└── leetcode-practice/     # interactive Cursor practice guide
 go/
 ├── go.mod
 ├── internal/ds/           # shared TreeNode, ListNode
